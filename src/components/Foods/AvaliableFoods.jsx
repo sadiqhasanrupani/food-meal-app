@@ -8,6 +8,7 @@ import LotusStem from "../../assets/CrispyHoneyLotusStem.jpg";
 import ShreddedChicken from "../../assets/ShreddedChicken.jpg";
 import DumBiriyani from "../../assets/DumBiriyani.jpeg";
 import TangriChickenBiryani from "../../assets/ChickenBiryani.jpg";
+import PrimaryBtn from "../UI/PrimaryBtn";
 
 const AvaliableFoods = () => {
   const DUMMY_FOODS = [
@@ -60,13 +61,35 @@ const AvaliableFoods = () => {
   ];
   return (
     <>
-      <section className={styles.food_container}>
+      <section className={`${styles.food_container} ${styles.flex}`}>
+        <div className={styles.svg_item}>
+          <svg width="256" height="9" viewBox="0 0 256 9">
+            <line
+              x1="4.98428"
+              y1="4.98434"
+              x2="251.984"
+              y2="4.01572"
+              stroke="#46415C"
+              stroke-width="8"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
         {DUMMY_FOODS.map((food) => {
           return (
-            <>
-              <li>{food.name}</li>
-              {/* <img src={food.image} alt="" /> */}
-            </>
+            <form>
+              <section className={styles.food_items}>
+                <div className={styles.image_items}>
+                  <img src={food.image} alt="food_images" />
+                </div>
+                <div className={styles.food_name}>
+                  {food.name}
+                  <div className={styles.food_price}>{"\u20B9"}{food.price}</div>
+                  <div className={styles.food_description}>{food.description}</div>
+                  <PrimaryBtn>Add cart</PrimaryBtn>
+                </div>
+              </section>
+            </form>
           );
         })}
       </section>

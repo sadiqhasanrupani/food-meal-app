@@ -1,9 +1,71 @@
+@use "../../styles/globals/colors" as *;
+
 .food_container {
   max-width: 100%;
   width: calc(100% - 5%);
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #eaf5ffbe;
-  border-radius: 0.75rem;
+  background-color: #ffeddff1;
+  border-top-left-radius: min(4.063rem, 48rem, 4.063rem);
+  border-top-right-radius: min(4.063rem, 48rem, 4.063rem);
   backdrop-filter: blur(23px);
+
+  .svg_item {
+    margin: 1% auto;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .food_items {
+    width: 64rem;
+    height: 23.563rem;
+    padding: 2%;
+    margin: 2% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    background-color: #d9d9d9;
+    border-radius: 1.25rem;
+
+    .food_name {
+      position: relative;
+      top: 1.5rem;
+      font-size: 1.813rem;
+      font-weight: 400;
+      color: $food-color;
+    }
+    .food_price {
+      position: relative;
+      top: 1.5rem;
+      font-size: 1.413rem;
+      color: $food-color-price;
+    }
+    .food_description {
+      position: relative;
+      top: 1.5rem;
+      font-size: 1.313rem;
+      color: $food-color-des;
+    }
+    .image_items {
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24rem;
+        height: 17rem;
+        border-radius: 1.313rem;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .svg_item {
+    svg {
+      width: 8.786rem;
+    }
+  }
 }

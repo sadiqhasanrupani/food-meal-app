@@ -1,3 +1,13 @@
 .food_container {
   margin-top: 8rem;
 }
+
+@media (max-width: 768px) {
+  .food_container {
+    position: relative;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25rem;
+  }
+}

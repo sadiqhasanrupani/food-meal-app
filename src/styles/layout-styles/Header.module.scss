@@ -57,10 +57,14 @@
 
 @media (min-width: 100px) and (max-width: 768px) {
   #svg {
-    height: 5rem;
+    height: 4rem;
   }
   h1 {
     font-size: 20px;
+    margin-left: 1rem;
+  }
+  .__item2 {
+    margin-right: 1rem;
   }
 }
 

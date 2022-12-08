@@ -33,6 +33,14 @@
   }
 }
 
+@media (max-width: 48rem) {
+  .summaryContent {
+    --top: 8.28rem;
+    margin: 4% auto;
+    --width: 23rem;
+  }
+}
+
 @media (min-width: 500px) and (max-width: 700px) {
   .summaryContent {
     --top: 25%;

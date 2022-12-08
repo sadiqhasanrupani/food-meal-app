@@ -1,0 +1,20 @@
+@use "../../styles/globals/colors" as *;
+
+.primary_btn {
+  position: relative;
+  top: 2rem;
+  width: 12.688rem;
+  height: 3.563rem;
+  border: none;
+  border-radius: 1.375rem;
+  font-size: 1.188rem;
+  font-weight: 600;
+  background-color: $primary-btn;
+  color: white;
+  transition: .3s ease-in all;
+  cursor: pointer;
+}
+
+.primary_btn:hover {
+  background-color: $primary-btn-light;
+}

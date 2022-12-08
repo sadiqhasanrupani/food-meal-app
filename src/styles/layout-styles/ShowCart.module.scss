@@ -58,7 +58,6 @@
   #badge {
     --width: 1.35rem;
     --height: 3vw;
-
     --translateX: 2.22rem;
     --translateY: 1.175rem;
   }
@@ -77,7 +76,9 @@
 @media (min-width: 12.5rem) and (max-width: 48rem) {
   .cartContainer {
     width: 13vw;
-    border-radius: 35rem;
+    border-radius: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   #showcartTitle {
     display: none;
