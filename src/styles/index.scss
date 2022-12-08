@@ -1,0 +1,22 @@
+@forward  "globals";
+@use "globals" as fonts;
+
+@font-face {
+  font-family: fonts.$poppins-m;
+  src: url("../fonts/MontserratPoppins/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: fonts.$poppins-r;
+  src: url("../fonts/MontserratPoppins/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: fonts.$poppins-bl;
+  src: url("../fonts/MontserratPoppins/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: fonts.$montserrat-s-b;
+  src: url("../fonts/MontserratPoppins/Montserrat/static/Montserrat-SemiBold.ttf");
+}

@@ -1,0 +1,71 @@
+@use "../globals/index" as *;
+@use "../../styles/globals/colors" as *;
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+.flex {
+  background-color: #ec7821;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  clip-path: url("#wave");
+  object-fit: cover;
+  align-items: center;
+  object-position: top center;
+  
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: transparent;
+    
+    svg {
+      position: relative;
+      display: block;
+      width: calc(150% + 1.3px);
+      height: 10rem;
+      transform: rotateY(180deg);
+      background-color: #8f8f8f00;
+    }
+    
+    .shape_fill {
+      fill: $background-color;
+    }
+  }
+}
+
+@media (min-width: 100px) and (max-width: 768px) {
+  #svg {
+    height: 5rem;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1229px) {
+  h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,9 @@
+.food_container {
+  max-width: 100%;
+  width: calc(100% - 5%);
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #eaf5ffbe;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(23px);
+}
