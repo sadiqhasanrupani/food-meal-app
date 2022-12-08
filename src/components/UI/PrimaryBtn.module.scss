@@ -18,3 +18,9 @@
 .primary_btn:hover {
   background-color: $primary-btn-light;
 }
+
+@media (max-width: 48rem) {
+  .primary_btn {
+    top: .5rem;
+  }
+}

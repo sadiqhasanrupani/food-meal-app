@@ -21,7 +21,7 @@
   .food_items {
     width: 64rem;
     height: 23.563rem;
-    padding: 2%;
+    padding: 3%;
     margin: 2% auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -52,7 +52,7 @@
       img {
         position: relative;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(var(--translateY,-50%));
         width: 24rem;
         height: 17rem;
         border-radius: 1.313rem;
@@ -66,6 +66,43 @@
   .svg_item {
     svg {
       width: 8.786rem;
+      margin: 2% auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .food_container {
+    .food_items {
+      width: 20rem;
+      // height: 33rem;
+      padding: 5rem;
+      grid-template-columns: repeat(1, 1fr);
+      overflow-x: hidden;
+      margin: 1rem auto;
+
+      .image_items {
+        img {
+          width: 15rem;
+          height: 10rem;
+          top: .0rem;
+          left: 50%;
+          transform: translateX(-50%);
+          --translateY: 0%;
+        }
+      }
+      .food_name {
+        font-size: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .food_price {
+        top: .1rem;
+        font-size: .8rem;
+      }
+      .food_description {
+        top: 0rem;
+        font-size: 1.1rem;
+        overflow: hidden;
+      }
     }
   }
 }

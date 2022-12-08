@@ -80,7 +80,7 @@ const AvaliableFoods = () => {
             <form>
               <section className={styles.food_items}>
                 <div className={styles.image_items}>
-                  <img src={food.image} alt="food_images" />
+                  <img src={food.image} alt="food_images" loading={"lazy"} />
                 </div>
                 <div className={styles.food_name}>
                   {food.name}
