@@ -75,23 +75,39 @@ const AvaliableFoods = () => {
             />
           </svg>
         </div>
-        {DUMMY_FOODS.map((food) => {
-          return (
-            <form>
-              <section className={styles.food_items}>
-                <div className={styles.image_items}>
-                  <img src={food.image} alt="food_images" loading={"lazy"} />
-                </div>
-                <div className={styles.food_name}>
-                  {food.name}
-                  <div className={styles.food_price}>{"\u20B9"}{food.price}</div>
-                  <div className={styles.food_description}>{food.description}</div>
-                  <PrimaryBtn>Add cart</PrimaryBtn>
-                </div>
-              </section>
-            </form>
-          );
-        })}
+        <section className={styles.foodlist_container}>
+          {DUMMY_FOODS.map((food) => {
+            return (
+              <form key={food.id}>
+                <section className={styles.food_items}>
+                  <div className={styles.image_items}>
+                    <img src={food.image} alt="food_images" loading={"lazy"} />
+                    <div className={styles.cart_hover_btn}>
+                      <PrimaryBtn className={styles.primary_btn_hover}>
+                        Add cart
+                      </PrimaryBtn>
+                    </div>
+                  </div>
+                  <div className={styles.food_details}>
+                    <div className={styles.food_name}>
+                      {food.name}
+                      <div className={styles.food_price}>
+                        {"\u20B9"}
+                        {food.price}
+                      </div>
+                      <div className={styles.food_description}>
+                        {food.description}
+                      </div>
+                      <div className={styles.primary_btn}>
+                        <PrimaryBtn>Add cart</PrimaryBtn>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </form>
+            );
+          })}
+        </section>
       </section>
     </>
   );
