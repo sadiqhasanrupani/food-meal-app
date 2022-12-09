@@ -1,7 +1,14 @@
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
+import { FoodContextProvider } from "./components/storage/food-context";
 
-import './styles/index.scss';
-import App from './App';
+import "./styles/index.scss";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+// context
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <FoodContextProvider>
+    <App />
+  </FoodContextProvider>
+);

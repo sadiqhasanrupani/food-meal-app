@@ -1,0 +1,183 @@
+@use "../../styles/globals/colors" as *;
+
+.food_items {
+  position: relative;
+  width: 64rem;
+  padding: 3%;
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  background-color: #d9d9d9;
+  border-radius: 1.25rem;
+  user-select: none;
+
+  .food_name {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.813rem;
+    font-weight: 400;
+    color: $food-color;
+    .buttons {
+      position: relative;
+      padding: 3rem 0rem 2rem 0rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      .amount {
+        width: 6rem;
+        text-align: center;
+        outline: none;
+      }
+      .amount:hover,
+      :focus {
+        outline: 2px solid $blue-black;
+      }
+    }
+  }
+  .food_price {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.413rem;
+    color: $food-color-price;
+  }
+  .food_description {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.13rem;
+    color: $food-color-des;
+    height: 3.5rem;
+    overflow: hidden;
+  }
+  .image_items {
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(var(--translateY, -50%));
+      width: 24rem;
+      height: 17rem;
+      border-radius: 1.313rem;
+      object-fit: cover;
+      transition: 0.3s ease-in all;
+    }
+    .cart_hover_btn {
+      display: none;
+      transition: 0.5s ease-in all;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .food_items {
+    width: 20rem;
+    padding: 2rem 5rem 4rem 5rem;
+    grid-template-columns: repeat(1, 1fr);
+    overflow-x: hidden;
+    margin: 2rem auto;
+    // cursor: pointer;
+
+    .image_items {
+      img {
+        width: 15rem;
+        height: 10rem;
+        top: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+        --translateY: 0%;
+        object-fit: cover;
+      }
+    }
+    .food_name {
+      position: relative;
+      font-size: 1.1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      .buttons {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 2rem;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        .PrimaryBtn {
+          grid-column: 1/5 ;
+          width: 100%;
+        }
+      }
+    }
+    .food_price {
+      top: 0.1rem;
+      font-size: 0.9rem;
+    }
+    .food_description {
+      top: 1rem;
+      font-size: 1rem;
+      height: 6rem;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (min-width: 120rem) {
+  .food_items {
+    width: 33rem;
+    height: 43rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    .image_items {
+      position: relative;
+      img {
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .image_items:hover,
+    :active {
+      .cart_hover_btn {
+        display: block;
+        position: absolute;
+        width: calc(100% - 22%);
+        height: 17rem;
+        background-color: $backdrop;
+        top: 2rem;
+        border-radius: 1.069rem;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        transition: 0.3s ease-in all;
+
+        .primary_btn_hover {
+          position: relative;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+    }
+    .food_name {
+      max-width: 79%;
+      top: 0;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      .buttons {
+        display: none;
+      }
+    }
+    .food_price {
+      top: 0;
+    }
+    .food_description {
+      top: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 5%;
+      overflow: visible;
+    }
+    .primary_btn {
+      display: none;
+    }
+  }
+}
