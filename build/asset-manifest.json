@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/food-meal-app/static/css/main.10805fab.css",
+    "main.js": "/food-meal-app/static/js/main.e959e3b1.js",
+    "static/media/ShreddedChicken.jpg": "/food-meal-app/static/media/ShreddedChicken.1d3d19e961a7aee9f2b6.jpg",
+    "static/media/Sushi.jpg": "/food-meal-app/static/media/Sushi.5a29550a7a49d63949cc.jpg",
+    "static/media/ChickenBiryani.jpg": "/food-meal-app/static/media/ChickenBiryani.fa414484aeade2edda8d.jpg",
+    "static/media/DumBiriyani.jpeg": "/food-meal-app/static/media/DumBiriyani.13ddcc3d2ea9df5dc58b.jpeg",
+    "static/media/meals.jpg": "/food-meal-app/static/media/meals.2971f633fc1382581cbf.jpg",
+    "static/media/VegThukpa.jpeg": "/food-meal-app/static/media/VegThukpa.ce01403fd6af65b1b069.jpeg",
+    "static/media/Montserrat-SemiBold.ttf": "/food-meal-app/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
+    "static/media/Poppins-MediumItalic.ttf": "/food-meal-app/static/media/Poppins-MediumItalic.89e040c6a64d18f620dc.ttf",
+    "static/media/Poppins-Regular.ttf": "/food-meal-app/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/food-meal-app/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/food-meal-app/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/CrispyHoneyLotusStem.jpg": "/food-meal-app/static/media/CrispyHoneyLotusStem.6936948af2073ac3a395.jpg",
+    "static/media/Cart.svg": "/food-meal-app/static/media/Cart.4dcbd40b4d0b38fc4f00042483bbf658.svg",
+    "index.html": "/food-meal-app/index.html",
+    "main.10805fab.css.map": "/food-meal-app/static/css/main.10805fab.css.map",
+    "main.e959e3b1.js.map": "/food-meal-app/static/js/main.e959e3b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10805fab.css",
+    "static/js/main.e959e3b1.js"
+  ]
+}
