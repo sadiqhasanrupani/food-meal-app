@@ -1,0 +1,79 @@
+@use "../../styles/globals/colors" as *;
+
+$radius: 0.813rem;
+$line: 125rem;
+
+.cartModel {
+  position: relative;
+  width: 100%;
+  height: var(--h, 40rem);
+  border-top-left-radius: 3.125rem;
+  border-top-right-radius: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  .totalSection {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: 1rem;
+    span {
+      width: 13rem;
+      padding: 1rem;
+      font-size: 1.17rem;
+      text-align: center;
+      border: 2px solid #43414b;
+      border-radius: $radius;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .totalAmount {
+      width: 8rem;
+      border: 2px solid $red-btn-light;
+      background-color: $red-btn-light;
+      color: whitesmoke;
+      font-weight: 800;
+    }
+  }
+  .buttonSection {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    .close-btn,
+    .order-btn {
+      position: relative;
+      width: 8rem;
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  #totalSection {
+    gap: 1rem;
+    .label {
+      width: 11rem;
+    }
+  }
+}
+
+@media (max-width: 78.25rem) {
+  .cartModel {
+    --h: 49rem;
+  }
+}
+
+@media (min-height: 52rem) {
+  .cartModel {
+    --h: 55.6rem;
+  }
+}
+
+@media (min-width: 120rem) {
+  .cartModel {
+    --h: 58rem;
+  }
+}

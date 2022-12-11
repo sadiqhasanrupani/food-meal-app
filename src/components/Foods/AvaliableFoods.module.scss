@@ -1,6 +1,8 @@
 @use "../../styles/globals/colors" as *;
 
 .food_container {
+  position: relative;
+  top: var(--top, 4.2rem);
   max-width: 100%;
   width: calc(100% - 5%);
   margin: 2rem auto;
@@ -36,5 +38,8 @@
   .foodlist_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .food_container {
+    --top: 6rem;
   }
 }

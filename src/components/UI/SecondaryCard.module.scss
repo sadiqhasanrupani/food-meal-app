@@ -1,0 +1,10 @@
+@use "../../styles/globals/colors" as color;
+
+.secondary-card {
+  width: 36.5rem;
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: color.$secondary-card;
+  border-radius: 1.25rem;
+}

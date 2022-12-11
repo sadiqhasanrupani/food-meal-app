@@ -1,0 +1,132 @@
+@use "../../styles/globals/colors" as *;
+$radius: 0.813rem;
+
+.foods-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  .foods-image {
+    img {
+      position: relative;
+      top: var(--t, 50%);
+      transform: translateY(var(--y, -50%));
+      width: 11.063rem;
+      height: 7.438rem;
+      object-fit: cover;
+      border-radius: 1.313rem;
+    }
+  }
+  .foods-detail {
+    font-size: 1.313rem;
+    line-height: 2.719rem;
+    .foods-price-qty {
+      font-size: 1.213rem;
+      line-height: 1.969rem;
+      .foods-price {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 1.59rem;
+        // border: 4px solid;
+        span {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          width: 6.563rem;
+          border: 0.125rem solid #43414b;
+          padding: 0rem 0.4rem 0rem 0.4rem;
+          border-radius: $radius;
+        }
+      }
+      .foods-qty {
+        position: relative;
+        top: -.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        .flex {
+          position: relative;
+          top: -.2rem;
+          left: 3.5rem;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+        }
+        .svg {
+          cursor: pointer;
+        }
+        
+        .qty {
+          position: relative;
+          top: -.5rem;
+          left: 30%;
+          transform: translateX(-50%);
+          text-align: center;
+          width: 4.375rem;
+          border: 0.125rem solid #43414b;
+          border-radius: $radius;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 78.25rem) {
+  .foods-content {
+    gap: 1rem;
+    .foods-image {
+      img {
+        --t: 0rem;
+        --y: 0rem;
+        width: 8rem;
+        height: 5rem;
+      }
+    }
+    .foods-detail {
+      font-size: 0.9rem;
+      line-height: 2.719rem;
+      font-weight: 600;
+      // margin-bottom: 2.719rem;
+      .foods-price-qty {
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        .foods-price {
+          span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.9rem;
+          }
+        }
+        .foods-qty {
+          .qty{
+            top: -.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            padding: 0.3rem;
+          }
+          .flex {
+            left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 120rem) {
+  .svg {
+    width: 35px;
+    height: 36px;
+    position: relative;
+    left: -.5rem;
+  }
+  .qty {
+    font-size: 1.2rem;
+  }
+}

@@ -1,6 +1,24 @@
+input ::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .input {
-  border: 1px solid hsla(240, 11%, 2%, 0.829);
-  border-radius: .7rem;
+  border: 2px solid hsla(0, 0%, 14%, 0.829);
+  border-radius: 0.7rem;
   margin: 1% auto;
   padding: 1rem;
+  background: transparent;
+  cursor: default;
+  // transition: .5s ease-in-out all;
+}
+
+input:hover,
+:focus {
+  border: 2px solid hsla(0, 0%, 84%, 0.829) ;
 }

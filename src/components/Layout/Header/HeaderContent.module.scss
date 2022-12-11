@@ -1,0 +1,22 @@
+.flex {
+  background-color: hsla(26, 84%, 53%, 0.87);
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  color: whitesmoke;
+  backdrop-filter: blur(.5rem);
+  border-radius: .367rem;
+}
+@media (min-width: 100px) and (max-width: 48rem) {
+  .__item2 {
+    margin-right: 1rem;
+  }
+}
+.sticky {
+  position: fixed;
+}

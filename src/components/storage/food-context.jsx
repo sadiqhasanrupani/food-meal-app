@@ -1,4 +1,4 @@
-import { createContext, useReducer, useEffect } from "react";
+import { createContext, useState } from "react";
 
 // Foods images.
 import Sushi from "../../assets/Sushi.jpg";
@@ -10,16 +10,30 @@ import TangriChickenBiryani from "../../assets/ChickenBiryani.jpg";
 
 const FoodContext = createContext({
   DUMMY_DATA: [],
+  onShowCart: () => {},
+  onHideCart: () => {},
+  isShowCart: false,
+  hideHandler: () => {},
 });
 
 export const FoodContextProvider = (props) => {
+  const [showCart, setShowCart] = useState(false);
+
+  const showCartHandler = () => {
+    setShowCart(true);
+  };
+
+  const hideCartHandler = () => {
+    setShowCart(false);
+  };
+
   const DUMMY_FOODS = [
     {
       id: 1,
       name: "Sushi",
       image: Sushi,
       description: "Finest fish and veggies",
-      price: 22.99,
+      price: 229,
     },
     {
       id: 2,
@@ -31,10 +45,10 @@ export const FoodContextProvider = (props) => {
     },
     {
       id: 3,
-      name: "Crispy Honey Lotus Stem (Chef's Special)",
+      name: "Crispy Honey Lotus Stem",
       image: LotusStem,
       description: "Crispy lotus stems tossed with honey and chilli flakes ",
-      price: 295.99,
+      price: 299,
     },
     {
       id: 4,
@@ -54,15 +68,20 @@ export const FoodContextProvider = (props) => {
     },
     {
       id: 6,
-      name: "Tangri Chicken Biryani (2 pcs)",
+      name: "Tangri Chicken Biryani",
       image: TangriChickenBiryani,
       description:
         "2 pieces of super soft charcoal grilled tangri chicken served with the mesmerizing aloo & layers of basmati rice.",
       price: 355,
     },
   ];
+
   const foodValues = {
     DUMMY_DATA: DUMMY_FOODS,
+    onShowCart: showCartHandler,
+    onHideCart: hideCartHandler,
+    isShowCart: showCart,
+    hideHandler: hideCartHandler,
   };
   return (
     <FoodContext.Provider value={foodValues}>

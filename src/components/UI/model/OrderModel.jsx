@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
 import { createPortal } from "react-dom";
+import { useContext } from "react";
+
 import Cross from "../Cross";
 
-//styles
-import styles from "./CartModel.module.scss";
-
-//context
+import styles from "./OrderModel.module.scss";
 import CartContext from "../../storage/cart-context";
 
-export const ModelBackdrop = (props) => {
+const ModelBackdrop = (props) => {
   return (
     <>
       <div
@@ -21,17 +19,17 @@ export const ModelBackdrop = (props) => {
   );
 };
 
-export const Model = (props) => {
-  const cartCtx = useContext(CartContext)
+const Model = (props) => {
+  const ctx = useContext(CartContext);
   return (
     <>
-      <ModelBackdrop backdrop={{onClick: cartCtx.onHideCart}} />
+      <ModelBackdrop backdrop={{ onClick: ctx.onHideOrder }} />
       <section className={`${styles.content} ${props.className}`}>
         <div className={styles.cross}>
           <Cross
             className={styles.svg}
             path={{ className: styles["shape-fill"] }}
-            svg={{ onClick: cartCtx.onHideCart }}
+            svg={{ onClick: ctx.onHideOrder }}
           />
         </div>
         <div className={`${styles.mainContent} ${props.className}`}>
@@ -42,16 +40,18 @@ export const Model = (props) => {
   );
 };
 
-const CartModel = (props) => {
+const OrderModel = (props) => {
   return (
-    <>
-      {createPortal(<ModelBackdrop />, document.querySelector("#model"))}
-      {createPortal(
-        <Model>{props.children}</Model>,
-        document.querySelector("#model")
-      )}
-    </>
+    <Model className={styles.model}>
+      <section id={styles.orderContent}>
+        <h2>Your order will be delivered soon. We appreciate you using our food app.</h2>
+      </section>
+    </Model>
   );
 };
 
-export default CartModel;
+const OrderModelPortal = (props) => {
+  return createPortal(<OrderModel />, document.querySelector("#model"));
+};
+
+export default OrderModelPortal;

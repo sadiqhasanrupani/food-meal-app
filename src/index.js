@@ -1,5 +1,8 @@
 import ReactDOM from "react-dom/client";
+
+// Context Wrappers.
 import { FoodContextProvider } from "./components/storage/food-context";
+import { CartContextProvider } from "./components/storage/cart-context";
 
 import "./styles/index.scss";
 import App from "./App";
@@ -8,7 +11,9 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <FoodContextProvider>
-    <App />
-  </FoodContextProvider>
+  <CartContextProvider> 
+    <FoodContextProvider>
+      <App />
+    </FoodContextProvider>
+  </CartContextProvider>
 );

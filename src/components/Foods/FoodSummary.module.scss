@@ -2,7 +2,7 @@
 
 .summaryContent {
   position: absolute;
-  top: var(--top,60%);
+  top: var(--top,50%);
   right: 0;
   left: var(--left,50%);
   transform: translateX(var(--translateX,-50%));
@@ -35,9 +35,12 @@
 
 @media (max-width: 48rem) {
   .summaryContent {
-    --top: 8.28rem;
+    --top: 7.28rem;
     margin: 4% auto;
-    --width: 23rem;
+    --width: 24rem;
+    h2 {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -64,5 +67,11 @@
 @media (min-width: 1440px) {
   .summaryContent {
     --width: 45rem
+  }
+}
+
+@media (min-width: 120rem) {
+  .summaryContent {
+    --top: 65%;
   }
 }

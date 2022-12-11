@@ -1,5 +1,4 @@
 @use "../../../styles/globals/colors" as *;
-
 .backdrop {
   position: fixed;
   top: var(--t, 0rem);
@@ -19,11 +18,13 @@
 .content {
   position: fixed;
   top: var(--t, 0rem);
+  height: 20rem;
+  top: var(--t, 50%);
   right: var(--r, 0rem);
-  transform: translate(var(--x, 0%), var(--y, 0%));
+  transform: translate(var(--x, -50%), var(--y, -50%));
+  left: 50%;
   max-width: var(--m-w, 100%);
   width: var(--w, 41.188rem);
-  height: 100rem;
   background-color: hsl(203, 68%, 96%);
   backdrop-filter: blur(2px);
   border-radius: 2rem;
@@ -39,7 +40,7 @@
     justify-content: flex-end;
     padding: 2rem;
     // border: 3px solid;
-
+    
     .svg {
       width: 1.2rem;
       cursor: pointer;
@@ -47,15 +48,17 @@
   }
 }
 
+#orderContent {
+  position: relative;
+  padding: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
 @media (max-width: 48rem) {
   .content {
-    background-color: $model-backdrop;
-    border-radius: 0rem;
-    .cross {
-      .shape-fill {
-        stroke: #f7f7f7;
-      }
-    }
+    width: 23rem;
   }
 }
 

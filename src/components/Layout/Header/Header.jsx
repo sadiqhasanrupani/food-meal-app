@@ -1,25 +1,16 @@
-import React, { Fragment as Frag} from "react";
-
-//components
-import ShowCart from "./ShowCart";
+import React, { Fragment as Frag } from "react";
 
 import mealsImage from "../../../assets/meals.jpg";
 
 // styles
 import styles from "../../../styles/layout-styles/Header.module.scss";
+import HeaderContent from "./HeaderContent";
 
 const Header = () => {
   return (
     <Frag>
       <header className={styles.container}>
-        <div className={styles.flex}>
-          <div className={styles.__item1}>
-            <h1>Food App</h1>
-          </div>
-          <div className={styles.__item2}>
-            <ShowCart />
-          </div>
-        </div>
+        <HeaderContent />
         <div className={styles.img}>
           <img src={mealsImage} alt="" />
           <div className={styles.__wave}>
