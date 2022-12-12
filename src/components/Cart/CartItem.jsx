@@ -1,15 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import styles from "./CartItem.module.scss";
 
 import SecondaryCard from "../UI/SecondaryCard";
-import Input from "../UI/Input/Input";
 import UpArrow from "../UI/Buttons/UpArrow";
 import DownArrow from "../UI/Buttons/DownArrow";
 
 const CartItem = (props) => {
-  const inputRef = useRef();
-
   return (
     <section className={styles.content} key={props.id}>
       <SecondaryCard>
@@ -26,19 +23,17 @@ const CartItem = (props) => {
               </div>
               <div className={styles["foods-qty"]}>
                 QTY{" "}
-                <div className={styles.flex}>
-                  <UpArrow svg={{ onClick: props.onAdd, className: styles.svg}} />
-                  <DownArrow svg={{ onClick: props.onRemove, className: styles.svg}} />
+                <div className={styles.flex} id={styles.flex}>
+                  <UpArrow
+                    svg={{ onClick: props.onAdd, className: styles.svg }}
+                  />
+                  <DownArrow
+                    svg={{ onClick: props.onRemove, className: styles.svg }}
+                  />
                 </div>
-                <Input
-                  className={styles.qty}
-                  Input={{
-                    ref: inputRef,
-                    id: styles.qty,
-                    defaultValue: props.amount,
-                    value: props.amount
-                  }}
-                />
+                <div className={styles.qty} id={styles.qty} >
+                  <div>{props.amount}</div>
+                </div>
               </div>
             </div>
           </div>

@@ -6,6 +6,14 @@
 
 # ScreenShots
 
+## Big Screen
+
+---
+
+![BigScreenHero](README/assets/hero_big.png)
+![BigScreenItems](README/assets/items_big.png)
+![BigScreenCart](README/assets/cart_big.png)
+
 ## Midium Screen
 
 ---

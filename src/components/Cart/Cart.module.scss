@@ -3,6 +3,16 @@
 $radius: 0.813rem;
 $line: 125rem;
 
+.slide {
+  animation: right-to-left 500ms ease-in-out;
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translate(100%);
+  }
+}
+
 .cartModel {
   position: relative;
   width: 100%;

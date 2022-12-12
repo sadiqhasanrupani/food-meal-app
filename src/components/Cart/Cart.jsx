@@ -32,7 +32,7 @@ const Cart = () => {
   return (
     <>
       <CartModel>
-        <PrimaryCard className={styles.cartModel}>
+        <PrimaryCard className={`${styles.cartModel} ${styles.slide}`}>
           {cartCtx.items.map((item) => {
             return (
               <div key={item.id}>

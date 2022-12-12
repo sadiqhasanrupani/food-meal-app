@@ -40,38 +40,63 @@ $radius: 0.813rem;
       }
       .foods-qty {
         position: relative;
-        top: -.5rem;
+        top: -0.5rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         .flex {
           position: relative;
-          top: -.2rem;
-          left: 3.5rem;
-          right: 0;
+          top: var(--top, -0.2rem);
+          left: var(--left, 3.5rem);
+          right: var(--right, 0rem);
           display: flex;
           flex-direction: column;
         }
         .svg {
           cursor: pointer;
         }
-        
+
         .qty {
+          border: 2px solid;
           position: relative;
-          top: -.5rem;
-          left: 30%;
+          top: -0.4rem;
+          left: 2.2rem;
           transform: translateX(-50%);
           text-align: center;
           width: 4.375rem;
           border: 0.125rem solid #43414b;
           border-radius: $radius;
+          div {
+            position: relative;
+            top: 50%;
+            transform: translate(0%, -50%);
+            // border: 3px solid;
+          }
         }
       }
     }
   }
 }
 
-
+@media (max-width: 48rem) {
+  .foods-qty {
+    #flex{
+      align-items: center;
+      left: 2rem;
+      transform: translate(-50%, 0%)
+    }
+    #qty {
+      width:3rem;
+      left: 50%;
+      transform: translate(-50%);
+      div {
+        top: .6rem;
+        width: 100%;
+        // border: 3px solid;
+      }
+    }
+  }
+}
 
 @media (max-width: 78.25rem) {
   .foods-content {
@@ -94,7 +119,7 @@ $radius: 0.813rem;
         font-size: 0.9rem;
         line-height: 1rem;
         .foods-price {
-          span{
+          span {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,8 +127,8 @@ $radius: 0.813rem;
           }
         }
         .foods-qty {
-          .qty{
-            top: -.4rem;
+          .qty {
+            top: -0.4rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -124,7 +149,7 @@ $radius: 0.813rem;
     width: 35px;
     height: 36px;
     position: relative;
-    left: -.5rem;
+    left: -0.5rem;
   }
   .qty {
     font-size: 1.2rem;
