@@ -47,7 +47,7 @@
   ```
   npm install
   ```
-- **Step-4:** Type "npm start" into your terminal.
+- **Step-5:** Type "npm start" into your terminal.
   ```
   npm start
   ```
