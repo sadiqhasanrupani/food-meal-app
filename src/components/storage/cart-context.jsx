@@ -1,4 +1,4 @@
-import { createContext, useReducer, useState } from "react";
+import React, { createContext, useCallback, useReducer, useState } from "react";
 
 const CartContext = createContext({
   items: [],
@@ -94,31 +94,33 @@ export const CartContextProvider = (props) => {
 
   const [cartState, dispatchCartAction] = useReducer(cartReducer, initialValue);
 
-  const addCartHandler = (item) => {
+  // const { item, totalAmount } = cartState;
+
+  const addCartHandler = useCallback((item) => {
     dispatchCartAction({ type: "ADD_CART", item: item });
-  };
+  }, []);
 
-  const RemoveCartHandler = (id) => {
+  const RemoveCartHandler = useCallback((id) => {
     dispatchCartAction({ type: "REMOVE_CART", id: id });
-  };
+  }, []);
 
-  const onHideOrderModel = () => {
+  const onHideOrderModel = useCallback(() => {
     setIsShowOrder(false);
-  };
+  }, []);
 
-  const showCartHandler = () => {
+  const showCartHandler = useCallback(() => {
     setShowCart(true);
-  };
+  }, []);
 
-  const hideCartHandler = () => {
+  const hideCartHandler = useCallback(() => {
     setShowCart(false);
-  };
+  }, []);
 
-  const orderHandler = () => {
+  const orderHandler = useCallback(() => {
     dispatchCartAction({ type: "ORDER" });
     setIsShowOrder(true);
     setShowCart(false);
-  };
+  }, []);
 
   const contextValues = {
     items: cartState.items,

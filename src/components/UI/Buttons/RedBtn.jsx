@@ -12,4 +12,4 @@ const RedBtn = (props) => {
   );
 };
 
-export default RedBtn;
+export default React.memo(RedBtn);

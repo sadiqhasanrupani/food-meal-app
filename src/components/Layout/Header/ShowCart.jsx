@@ -32,4 +32,4 @@ const ShowCart = (props) => {
   );
 };
 
-export default ShowCart;
+export default React.memo(ShowCart);

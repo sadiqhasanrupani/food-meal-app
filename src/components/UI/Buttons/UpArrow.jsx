@@ -52,4 +52,4 @@ const UpArrow = (props) => {
   );
 };
 
-export default UpArrow;
+export default React.memo(UpArrow);

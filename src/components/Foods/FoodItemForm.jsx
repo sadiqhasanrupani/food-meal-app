@@ -1,4 +1,4 @@
-import { useReducer, useRef } from "react";
+import { useCallback, useReducer, useRef } from "react";
 import styles from "./FoodItemForm.module.scss";
 
 // UI components
@@ -41,6 +41,8 @@ const FoodItemForm = (props) => {
     initialValue
   );
 
+  // const { inputVal } = amountState;
+
   const { amountIsValid: isValid } = amountState;
 
   const submitHandler = (e) => {
@@ -65,16 +67,16 @@ const FoodItemForm = (props) => {
     });
   };
 
-  const addEventHandler = () => {
+  const addEventHandler = useCallback(() => {
     dispatchAmountAction({ type: "ADD", inputVal: inputAmount.current.value });
-  };
+  }, [inputAmount]);
 
-  const removeEventHandler = () => {
+  const removeEventHandler = useCallback(() => {
     dispatchAmountAction({
       type: "REMOVE",
       inputVal: inputAmount.current.value,
     });
-  };
+  }, []);
 
   return (
     <form onSubmit={submitHandler}>

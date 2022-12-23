@@ -67,4 +67,4 @@ const DownArrow = (props) => {
   );
 };
 
-export default DownArrow;
+export default React.memo(DownArrow);

@@ -13,4 +13,4 @@ const PrimaryBtn = (props) => {
   );
 };
 
-export default PrimaryBtn;
+export default React.memo(PrimaryBtn);

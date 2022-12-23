@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useCallback, useContext } from "react";
 
 // styles
 import styles from "./Cart.module.scss";
@@ -20,14 +20,16 @@ const Cart = () => {
 
   const hasItems = cartCtx.items.length > 0;
 
-  const AddItemHandler = (item) => {
-    cartCtx.addItem({ ...item, amount: 1 });
-  };
+  const AddItemHandler = useCallback(
+    (item) => {
+      cartCtx.addItem({ ...item, amount: 1 });
+    },
+    [cartCtx]
+  );
 
-  const RemoveItemHandler = (id) => {
+  const RemoveItemHandler = useCallback((id) => {
     cartCtx.removeItem(id);
-  };
-
+  },[cartCtx]);
 
   return (
     <>
@@ -63,7 +65,12 @@ const Cart = () => {
               Close
             </RedBtn>
             {hasItems && (
-              <GreenBtn className={styles["order-btn"]} GreenBtn={{onClick: cartCtx.onOrder}}>Order</GreenBtn>
+              <GreenBtn
+                className={styles["order-btn"]}
+                GreenBtn={{ onClick: cartCtx.onOrder }}
+              >
+                Order
+              </GreenBtn>
             )}
           </div>
         </PrimaryCard>
