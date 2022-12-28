@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-meal-app/static/css/main.8f113e2a.css",
-    "main.js": "/food-meal-app/static/js/main.ed9fe004.js",
+    "main.css": "/food-meal-app/static/css/main.082680e5.css",
+    "main.js": "/food-meal-app/static/js/main.78f0afe2.js",
     "static/media/ShreddedChicken.jpg": "/food-meal-app/static/media/ShreddedChicken.1d3d19e961a7aee9f2b6.jpg",
     "static/media/Sushi.jpg": "/food-meal-app/static/media/Sushi.5a29550a7a49d63949cc.jpg",
     "static/media/ChickenBiryani.jpg": "/food-meal-app/static/media/ChickenBiryani.fa414484aeade2edda8d.jpg",
@@ -16,11 +16,11 @@
     "static/media/CrispyHoneyLotusStem.jpg": "/food-meal-app/static/media/CrispyHoneyLotusStem.6936948af2073ac3a395.jpg",
     "static/media/Cart.svg": "/food-meal-app/static/media/Cart.4dcbd40b4d0b38fc4f00042483bbf658.svg",
     "index.html": "/food-meal-app/index.html",
-    "main.8f113e2a.css.map": "/food-meal-app/static/css/main.8f113e2a.css.map",
-    "main.ed9fe004.js.map": "/food-meal-app/static/js/main.ed9fe004.js.map"
+    "main.082680e5.css.map": "/food-meal-app/static/css/main.082680e5.css.map",
+    "main.78f0afe2.js.map": "/food-meal-app/static/js/main.78f0afe2.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f113e2a.css",
-    "static/js/main.ed9fe004.js"
+    "static/css/main.082680e5.css",
+    "static/js/main.78f0afe2.js"
   ]
 }
